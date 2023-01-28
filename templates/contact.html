@@ -9,7 +9,8 @@
     </div>
 
     <div class="form">
-    <form class="contact-form">
+    <form class="contact-form" method="POST" action="{% url 'contacts' %} ">
+        {% csrf_token %}
         <div class="info">
             <div>First Name*:</div>
             <div><input type="text" name="first_name" placeholder="Enter your First Name"></div>
@@ -25,7 +26,7 @@
         <div class="info">
             <div>Leave us a message:</div>
             <div class="messg">
-                <textarea placeholder="Type your message here" rows="8" cols="50"></textarea>
+                <textarea name="message" placeholder="Type your message here" rows="8" cols="45"></textarea>
             </div>
         </div>
         <div class="f-btn">

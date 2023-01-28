@@ -8,6 +8,7 @@ header{
   width: 100%; 
   z-index: 2;
   padding: 1em 0px;
+  height: 20px;
 }
 
 .responsive-cell-block {
