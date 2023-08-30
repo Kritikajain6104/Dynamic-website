@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'contact',
     'blog',
     'tinymce',
-    'rest_framework'
+    'rest_framework',
+    'techteam',
+    'contentteam',
+    'eventteam',
+    'gdteam',
 ]
 
 MIDDLEWARE = [

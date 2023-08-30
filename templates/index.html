@@ -31,18 +31,7 @@
         <h3 class="text-3xl font-bold mb-6 text-gray-800">Meet The Leads</h3>
       </div>
 
-      <!-- Leads Section -->
-     {% comment %} <div class="row">
-        <div class="col-12">
-      <form method="GET" >
-        <input type="text" name="name1"/>
-        <input type="submit" value="search"/>
-      </form>
-    </div>
-  </div>  {% endcomment %}
-      
-        
-  <marquee onmouseover="stop()" onmouseout="start()" >
+  {% comment %} <marquee onmouseover="stop()" onmouseout="start()" > {% endcomment %}
         <div class="product-container">
         {% for a in leaddata %}
         <div class="product-card">
@@ -56,7 +45,7 @@
           <div class="socials">
             
             <div class="social-container">
-              <a href=" {{a.lead_tweeter}} " target="_blank" class="ml-3 text-gray-500 " style="user-select: auto;">
+              <a href=" {{a.lead_twitter}} " target="_blank" class="ml-3 text-gray-500 " style="user-select: auto;">
                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" style="user-select: auto;">
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" style="user-select: auto;"></path>
                 </svg>
@@ -82,7 +71,7 @@
       </div>
         {% endfor %}
       </div>
-      </marquee>
+      {% comment %} </marquee> {% endcomment %}
 
         
      

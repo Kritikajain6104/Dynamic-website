@@ -3,7 +3,10 @@ from lead.models import lead
 from contact.models import contact1
 from django.http import HttpResponseRedirect
 from blog.models import blog
-
+from techteam.models import techteam
+from contentteam.models import contentteam
+from eventteam.models import eventteam
+from gdteam.models import gdteam
 
 def index(request):
     leaddata=lead.objects.all()
@@ -13,10 +16,23 @@ def index(request):
     return render(request,"index.html",data)
 
 def events(request):
+
+
     return render(request,"events.html")
 
 def team(request):
-    return render(request,"team.html")
+    techteamdata=techteam.objects.all()
+    contentteamdata=contentteam.objects.all()
+    eventteamdata=eventteam.objects.all()
+    gdteamdata=gdteam.objects.all()
+    data2={
+        'techteamdata':techteamdata,
+        'contentteamdata':contentteamdata,
+        'eventteamdata':eventteamdata,
+        'gdteamdata':gdteamdata,
+
+    }
+    return render(request,"team.html",data2)
 
 def blogs(request):
     blogsdata=blog.objects.all()
